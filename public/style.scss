@@ -1,0 +1,1001 @@
+@import "https://fonts.cdnfonts.com/css/sf-pro-display";
+button {
+	cursor: pointer;
+}
+
+	/* DESKTOP CSS */
+
+/* container of ordering in mobile view correcting for res...  -------------------- */
+.lil {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+/* wrapper correcting for res...  -------------------- */
+.wrapper {
+	display: flex;
+	max-width: 1440px;
+	max-height: 1000px;
+	position: relative;
+	background-color: black;
+	justify-content: center;
+	align-items: center;
+}
+/* allowing to scroll full height on this res...  -------------------- */
+.content_container {
+	max-width: 1176px;
+	min-width: 1176px;
+	height: 100%;
+	position: relative;
+	padding-inline: 68px;
+	display: grid;
+	overflow-x:hidden;
+	grid-template-columns: repeat(auto,auto);
+	grid-template-rows: auto;
+	overflow: hidden;
+}
+/* Style for header wrapper with buttons and search -------------------- */
+.main_wrapper {
+	position: relative;
+	background-color: #FFFFFF;
+	width: 100%;
+	height: 900px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+/* Style for header wrapper with buttons and search -------------------- */
+.header_wrapper {
+	position: relative;
+	margin-block-start: 49px;
+	margin-block-end: 32px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+}
+.search_box {
+	position: relative;
+	width: 232px;
+	height: 48px;
+	#input-img {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		padding-inline-start:12px;
+		padding-block-end: 17px;
+		img {
+			width: 16px;
+			height: 16px;
+		}
+	}
+	input {
+		background-color: #F7F7F9;
+		border: none;
+		border-radius: 8px;
+		outline: none;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 24px;
+		color: #9896A1;
+		padding: 12px;
+		padding-left:32px;
+		width: 232px;
+		height: 48px;
+		&:-ms-input-placeholder {
+			width: 42px;
+			height: 24px;
+			font-family: 'SF Pro Display';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 24px;
+			color: red;
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+		}
+	}
+}
+/* Style div with buttons in it -------------------- */
+.buttons_box {
+	height: 48px;
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	button {
+		width: 48px;
+		height: 48px;
+		position: relative;
+		background: #F7F7F9;
+		outline: none;
+		border: none;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 8px;
+		&:nth-child(1) {
+			margin-right: 16px;
+			.notification_dot {
+				background: #EA4D4D;
+				border-radius: 9999px;
+				border: 2px solid #FFFFFF;
+				position: absolute;
+				right: 0;
+				top: 0;
+				transform: translate(20%, -20%);
+				align-items: center;
+				display: flex;
+				justify-content: center;
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+}
+/*  two cards_wrapper style with nth child style for each -------------------- */
+.cards_wrapper {
+	position: relative;
+    display: grid;
+	grid-auto-columns: auto;
+	grid-gap: 32px;
+	.card {
+		padding: 32px;
+		.card_balance_info_container {
+			display: flex;
+			position: relative;
+			flex-direction: column;
+		}
+		.card_data_container {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			padding-block: 24px;
+		}
+		.canvas_legend_container {
+			position: absolute;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			bottom:16px;
+			width: 90%;
+			.this_month {
+				width: 70px;
+				height: 10px;
+				left: 913px;
+				top: 438px;
+				font-family: 'SF Pro Display';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 10px;
+				color: #9896A1;
+				margin-right:8px;
+				img {
+					width: 8px;
+					height: 8px;
+				}
+			}
+			.last_month {
+				width: 70px;
+				height: 10px;
+				font-family: 'SF Pro Display';
+				font-style: normal;
+				font-weight: 400;
+				font-size: 12px;
+				line-height: 10px;
+				color: #9896A1;
+				img {
+					width: 8px;
+					height: 8px;
+				}
+			}
+		}
+		h1 {
+			position: relative;
+			width: 283px;
+			height: 56px;
+			font-family: 'SF Pro Display';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 56px;
+			margin: 0;
+			margin-block-start: 40px;
+			line-height: 56px;
+			color: #000000;
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+		}
+		.percenteges {
+			width: 141px;
+			height: 24px;
+			margin: 0;
+			margin-block-start: 16px;
+			font-family: 'SF Pro Display';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 18px;
+			line-height: 24px;
+			color: #2DC78F;
+			flex: none;
+			order: 1;
+			flex-grow: 0;
+		}
+		&:nth-child(1) {
+			width: 509px;
+			height: 270px;
+			background: #F7F7F9;
+			border-radius: 16px;
+			grid-column-start: 1;
+			grid-column-end: 4;
+			grid-row-start: 1;
+			grid-row-end: auto;
+		}
+		&:nth-child(2) {
+			width: 499px;
+			height: 270px;
+			background: #F7F7F9;
+			border-radius: 16px;
+			grid-column-start: 4;
+			grid-column-end: 8;
+			grid-row-start: 1;
+			grid-row-end: auto;
+		}
+	}
+
+}
+/* Style for header wrapper with buttons and search -------------------- */
+.header_info_wrapper {
+	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	button {
+		background-color: transparent;
+		border: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outlline: 0;
+		width: 24px;
+		height: 24px;
+		img {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 0;
+		}
+	}
+	h2 {
+		position: relative;
+		width: 139px;
+		height: 24px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		margin: 0;
+		line-height: 24px;
+	}
+}
+/* Style for bottom container with buttons (quick and show report) for card with balance -------------------- */
+.bottom_buttons_wrapper {
+		flex-direction: row;
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		position: relative;
+		height:41%;
+		bottom:0;
+	.quick_btn {
+			background-color: #7445FB;
+			border: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:8px;
+			outline: 0;
+			min-width: 109px;
+			min-height: 40px;
+			margin-inline-end: 8px;
+			border-radius: 4px;
+			span {
+				width: 77px;
+				height: 24px;
+				font-family: 'SF Pro Display';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 24px;
+				color: #FFFFFF;
+			}
+	}
+
+		.show_btn {
+			border: none;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding:8px;
+			outline: 0;
+			width: 112px;
+			height: 40px;
+			background: #FFFFFF;
+			border: 1px solid #EBEBF3;
+			border-radius: 4px;
+			span {
+				width: 80px;
+				height: 24px;
+				font-family: 'SF Pro Display';
+				font-style: normal;
+				font-weight: 500;
+				font-size: 13px;
+				line-height: 24px;
+				color: #7445FB;
+			}
+	}
+}
+/* Overlay div for table_wrapper -------------------- */
+.overlay {
+	position: absolute;
+	width: 1176px;
+	height: 136px;
+	display: flex;
+	left: 0;
+	bottom: 99px;
+	z-index: 9999;
+	background: linear-gradient(180deg, rgba(247, 247, 249, 0) 0%, #F7F7F9 100%);
+}
+	
+/* crypto box card_wrapper style with nth child style and grid settings fro this resol... -------------------- */
+.crypto_card_wrapper {
+	position: relative;
+	grid-column-start: 1;
+    grid-column-end: 8;
+	padding-inline: 20px;
+	height: 80px;
+	background: #FFFFFF;
+	border: 1px solid #EBEBF3;
+	border-radius: 8px;
+}
+.crypto_card_container {
+	place-self: center; 
+	align-items: center;
+	display: grid;
+	height: 100%;
+	grid-template-columns: 2fr 3fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr  2fr 3fr 3fr ;
+	grid-template-rows: repeat(1, 2fr);
+	.crypto_child {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+	}
+	.crypto_child:nth-child(1) {
+		grid-column-start: 1;
+		grid-column-end: 2;
+		grid-row-start: 1;
+		grid-row-end: auto;
+	}
+	.crypto_child:nth-child(2) {
+		grid-column-start: 3;
+		grid-column-end: 5;
+		grid-row-start: 1;
+		grid-row-end: auto;
+	}
+	.crypto_child:nth-child(3) {
+		grid-column-start: 6;
+		grid-column-end: 7;
+		grid-row-start: 1;
+		grid-row-end: auto;
+	}
+	.crypto_child:nth-child(4) {
+		grid-column-start: 9;
+		grid-column-end: 11;
+		grid-row-start: 1;
+		grid-row-end: 1;
+	}
+	.crypto_child:nth-child(5) {
+		grid-column-start: 12;
+		grid-column-end: 13;
+		grid-row-start: 1;
+		grid-row-end: 1;
+	}
+}
+
+.crypto_pic_cont {
+	height: 48px;
+	width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #FFFFFF;
+	border-radius: 50px;
+	border: 1px solid #EBEBF3;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+.crypto_name {
+	h1 {
+		width: 43px;
+		height: 14px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		padding: 0;
+		margin: 0;
+		line-height: 14px;
+		color: #0A041C;
+	}
+	span {
+		width: 26px;
+		padding: 0;
+		margin: 0;
+		height: 14px;
+		padding-block-end: 6px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		color: #9896A1;
+	}
+}
+.crypto_price {
+	h1 {
+		width: 77px;
+		height: 14px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 14px;
+		line-height: 14px;
+		text-overflow: ellipsis;
+		color: #0A041C;
+	}
+	span {
+		width: 30px;
+		height: 14px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		text-overflow: ellipsis;
+		line-height: 14px;
+		color: #9896A1;
+	}
+}
+.crypto_change {
+	h1 {
+		height: 14px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 14px;
+		color: #2DC78F;
+		display: flex;
+		justify-content: center;
+		img {
+			padding-left:7px;
+			width: 14px;
+			height: 14px;
+		}
+	}
+	span {
+		width: 47px;
+		height: 14px;
+		font-family: 'SF Pro Display';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 14px;
+		color: #9896A1;
+	}
+}
+.crypto_stat {
+	width: 148px;
+	height: 32px;
+	img{
+		width: 148px;
+		height: 32px;
+	}
+}
+.crypto_buttons {
+	flex-direction: row;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	.sell_btn {
+		width: 55px;
+		height: 40px;
+		background: #FFFFFF;
+		border: 1px solid #EBEBF3;
+		border-radius: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding:8px;
+		outline: 0;
+		span{
+			width: 23px;
+			height: 24px;
+			font-family: 'SF Pro Display';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 24px;
+			color: #7445FB;
+		}
+	}
+	.buy_btn {
+		width: 56px;
+		height: 40px;
+		background: #7445FB;
+		border: none;
+		border-radius: 2px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding:8px;
+		outline: 0;
+		margin-inline-start: 8px;
+		span {
+			width: 24px;
+			height: 24px;
+			font-family: 'SF Pro Display';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 13px;
+			line-height: 24px;
+			color: #FFFFFF;
+		}
+	}
+}
+/* condition style for data on -  -------------------- */
+#minus_status {
+	width: 57px;
+	height: 14px;
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 14px;
+	color: #EA4D4D;
+}
+
+/*  table_wrapper style with all style for all of the table elements needed to correct on this resolution -------------------- */
+.table_wrapper {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: auto;
+}
+.table_container {
+	margin-block-start: 32px;
+	position: relative;
+    display: grid;
+	width: 1176px;
+	min-height: 504px;
+	max-height: 504px;
+	background: #F7F7F9;
+	border-radius: 16px 16px 0 0;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    grid-row-start: 1;
+    grid-row-end: auto;
+	overflow: hidden;
+}
+.table_content_container {
+	overflow: scroll;
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: auto;
+	gap: 8px;
+	padding-block-start: 32px;
+	width: 100%;
+	min-height: 504px;
+	max-height: 504px;
+}
+.tabs_wrapper {
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 32px;
+	padding-block-end: 0px;
+	gap: 16px;
+	height: 33px;
+	border-block-end: solid 1px #EBEBF3;
+}
+.tabs_container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	width: 367px;
+	height: 24px;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	button {
+		border: none;
+		outline: none;
+		gap: 24px;
+		background: transparent;
+	}
+}
+.tab_active {
+	width: 67px;
+	height: 24px;
+	border-bottom: 4px solid #7445FB;
+	padding-bottom: 11px;
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	color: #0A041C;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+}
+.tab_inactive {
+	width: 67px;
+	height: 24px;
+	padding-bottom: 11px;
+	font-family: 'SF Pro Display';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #9896A1;
+	flex: none;
+	order: 1;
+	flex-grow: 0;
+}
+
+	/* MOBILE AND TABLETS CSS */
+
+/* For Mobile Portrait View */
+@media screen and (min-width: 320px) and (max-width: 675px) {
+	.sidebar_wrapper {
+		display: none;
+	}
+	/* container of ordering in mobile view correcting for res...  -------------------- */
+	.lil {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	/* wrapper correcting for res...  -------------------- */
+	.wrapper {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas: "main_wrapper";
+		place-items: center;
+	}
+	/* allowing to scroll full height on this res...  -------------------- */
+	.content_container {
+		overflow: scroll;
+		overflow-x:hidden;
+	}
+	.main_wrapper {
+		height: 101vh;
+	}
+	/* Style for header wrapper with buttons and search -------------------- */
+	.header_wrapper {
+		margin-block-start: 32px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	/* Style div with buttons in it -------------------- */
+	.buttons_box {
+		width: 232px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		align-items: center;
+	}
+	/* Overlay div for table_wrapper -------------------- */
+	.overlay {
+		bottom: 0px;
+		left:399px;
+		display: flex;
+		width: 370px;
+	}
+	/*  two cards_wrapper style with nth child style for each -------------------- */
+	.cards_wrapper {
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: auto;
+		grid-gap: 16px;
+		margin-bottom: 40px;
+		order:2;
+		.card {
+			&:nth-child(1) {
+				width: 309px;
+				height: auto;
+				background: #F7F7F9;
+				border-radius: 16px;
+				grid-column-start: 1;
+				grid-column-end: 4;
+				grid-row-start: 1;
+				grid-row-end: auto;
+			}
+			&:nth-child(2) {
+				width: 309px;
+				height: auto;
+				background: #F7F7F9;
+				border-radius: 16px;
+				grid-column-start: 1;
+				grid-column-end: 4;
+				grid-row-start: 3;
+				grid-row-end: auto;
+			}
+			.percenteges {
+				margin-block-end: 10px;
+			}
+		}
+	}
+	/*  table_wrapper style with all style for all of the table elements needed to correct on this resolution -------------------- */
+	.table_wrapper {
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: auto;
+		order:1;
+		margin-block-end:32px;
+	}
+	.table_container {
+		margin-block-start: 32px;
+		position: relative;
+		display: grid;
+		max-width: 370px;
+    	border-radius: 16px;
+    	grid-column-start: 1;
+    	grid-column-end: 8;
+    	grid-row-start: 2;
+    	grid-row-end: auto;
+		gap:32px;
+		min-height: 504px;
+		max-height: 504px;
+		background: #F7F7F9;
+		border-radius: 16px 16px 0 0;
+		overflow: hidden;
+		.table_content_container {
+			overflow: scroll;
+			position: relative;
+			display: grid;
+			width: auto;
+			gap: 8px;
+			padding-block-start: 32px;
+			width: auto;
+			min-height: 504px;
+			max-height: 504px;
+		}
+	}
+	/* crypto box card_wrapper style with nth child style and grid settings fro this resol... -------------------- */
+	.crypto_card_wrapper {
+		position: relative;
+		grid-column-start: 1;
+		grid-column-end: 4;
+		padding-inline: 20px;
+		width: 265px;
+		min-height: 300px;
+		max-height: 300px;
+		background: #FFFFFF;
+		border: 1px solid #EBEBF3;
+		border-radius: 8px;
+		.crypto_card_container {
+			grid-template-columns: 2fr 1fr 1fr 3fr 2fr 2fr 11fr;
+			grid-template-rows: repeat(3, 2fr);
+			.crypto_child:nth-child(1) {
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 1;
+				grid-row-end: 1;
+			}
+			.crypto_child:nth-child(2){
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 3;
+				grid-row-end: 3;
+			}
+			.crypto_child:nth-child(3){
+				grid-column-start: 5;
+				grid-column-end: 7;
+				grid-row-start: 3;
+				grid-row-end: 3;
+			}
+			.crypto_child:nth-child(4){
+				grid-column-start: 1;
+				grid-column-end: 5;
+				grid-row-start: 2;
+				grid-row-end: 2;
+			}
+			.crypto_child:nth-child(5){
+				grid-column-start: 5;
+				grid-column-end: 7;
+				grid-row-start: 1;
+				grid-row-end: 1;	
+			}
+		}
+	}
+	
+}
+/* Tablets (portrait) -------------------- */
+@media screen and (min-width: 676px) and (max-width: 1154px)
+ {
+	.sidebar_wrapper {
+		display: none;
+	}
+	/* wrapper correcting for res...  -------------------- */
+	.wrapper {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas: "main_wrapper";
+		place-items: center;
+	}
+	/* allowing to scroll full height on this res...  -------------------- */
+	.content_container {
+		overflow: scroll;
+		overflow-x:hidden;
+	}
+	/* Style for header wrapper with buttons and search -------------------- */
+	.header_wrapper {
+		margin-block-start: 32px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+	}
+	/* Style div with buttons in it -------------------- */
+	.buttons_box {
+		width: 232px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		margin-top: 16px;
+		align-items: center;
+	}
+	/* Overlay div for table_wrapper -------------------- */
+	.overlay {
+		bottom: 0px;
+		left:309px;
+		display: flex;
+		width: 560px;
+	}
+	/*  two cards_wrapper style with nth child style for each -------------------- */
+	.cards_wrapper {
+		position: relative;
+		display: grid;
+		place-items: center;
+		width: auto;
+		margin-bottom: 80px;
+		grid-gap: 16px;
+		order:2;
+		.card {
+			&:nth-child(1) {
+				width: 509px;
+				height: 270px;
+				background: #F7F7F9;
+				border-radius: 16px;
+				grid-column-start: 1;
+				grid-column-end: 8;
+				grid-row-start: 1;
+				grid-row-end: auto;
+			}
+			&:nth-child(2) {
+				width: 499px;
+				height: 270px;
+				background: #F7F7F9;
+				border-radius: 16px;
+				grid-column-start: 1;
+				grid-column-end: 8;
+				grid-row-start: 3;
+				grid-row-end: auto;
+			}
+		}
+	}
+		/*  table_wrapper style with all style for all of the table elements needed to correct on this resolution -------------------- */
+	.table_wrapper {
+		position: relative;
+		display: grid;
+		order:1;
+		margin-block-end:32px;
+		place-items: center;
+		width: auto;
+	}
+	
+	.table_container {
+		margin-block-start: 32px;
+		position: relative;
+		display: grid;
+		max-width: 560px;
+    	border-radius: 16px;
+    	grid-column-start: 1;
+    	grid-column-end: 8;
+    	grid-row-start: 2;
+    	grid-row-end: auto;
+		gap:32px;
+		min-height: 504px;
+		max-height: 504px;
+		background: #F7F7F9;
+		border-radius: 16px 16px 0 0;
+		overflow: hidden;
+		.table_content_container {
+			overflow: scroll;
+			position: relative;
+			display: grid;
+	
+			place-items: center;
+			width: auto;
+			gap: 8px;
+			padding-block-start: 32px;
+			width: 100%;
+			min-height: 504px;
+			max-height: 504px;
+		}
+	}
+		/* crypto box card_wrapper style with nth child style and grid settings fro this resol... -------------------- */
+	.crypto_card_wrapper {
+		position: relative;
+		grid-column-start: 1;
+		grid-column-end: 8;
+		padding-inline: 20px;
+		width: auto;
+		min-height: 160px;
+		max-height: 160px;
+		background: #FFFFFF;
+		border: 1px solid #EBEBF3;
+		border-radius: 8px;
+		.crypto_card_container {
+			grid-template-columns: 2fr 1fr 1fr 3fr 2fr 2fr 4fr;
+			grid-template-rows: repeat(2, 2fr);
+			.crypto_child:nth-child(1) {
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 1;
+				grid-row-end: 1;
+			}
+			.crypto_child:nth-child(2){
+				grid-column-start: 1;
+				grid-column-end: 2;
+				grid-row-start: 2;
+				grid-row-end: 2;
+			}
+			.crypto_child:nth-child(3){
+				grid-column-start: 6;
+				grid-column-end: 8;
+				grid-row-start: 2;
+				grid-row-end: 2;
+			}
+			.crypto_child:nth-child(4){
+				grid-column-start: 6;
+				grid-column-end: 8;
+				grid-row-start: 1;
+				grid-row-end: 2;
+			}
+			.crypto_child:nth-child(5){
+				grid-column-start: 4;
+				grid-column-end: 4;
+				grid-row-start: 1;
+				grid-row-end: 1;
+			}
+		}
+	}
+	
+}
